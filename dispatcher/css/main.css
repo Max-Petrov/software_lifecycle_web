@@ -1,0 +1,83 @@
+html,
+body {
+    height: 100%;
+}
+
+header, footer {
+    background-color: rgb(243, 148, 52);
+}
+
+nav {
+    border-radius: 5px;
+}
+
+.logo {
+    max-width: 35px;
+    max-height: 35px;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.main {
+    min-height: 100%;
+    height: 100%;
+    margin: 0 auto -60px;
+}
+
+.main, nav {
+    background-color: rgb(247,247,247);
+}
+
+.nav-link {
+    color: black;
+}
+
+.active {
+    color: white;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 10px 0 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.table-responsive {
+    margin-top: 5px !important;
+    height: 375px !important;
+    overflow: auto;
+}
+
+.actions .btn{
+    float: right;
+}
+
+.form-group {
+    margin-right: 10px;
+}
+
+.btn {
+    min-width: 180px;
+}
+
+.btn-primary, .active {
+    border: 5px;
+    border-color: rgb(243, 148, 52) !important;
+    background-color: rgb(170, 170, 170) !important;
+}
+
+footer {
+    color: white;
+    height: 60px;
+    padding: 5px;
+}
+
+.copyright {
+    float: left;
+}
+
+.version-info {
+    float: right;
+}

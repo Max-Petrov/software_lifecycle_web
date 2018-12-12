@@ -1,0 +1,5 @@
+function getRouteModel() {
+    var routes = [];
+
+
+}
