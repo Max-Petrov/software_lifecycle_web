@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/jobs.css">
+</head>
+<body>
+    <!-- HTML-код модального окна -->
+    <div class="modal fade bd-example-modal-sm" id="jobModalBox">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Новое задание</h5>
+                    <button class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form" action="#" method="post">
+                        <div class="form-group">
+                            <input name="jobId" type="hidden" id="jobId">
+                            <input name="creationTime" type="hidden" id="creationTime">
+                            <input name="timeStartPlan" type="hidden" id="timeStartPlan">
+                            <input name="timeStartFact" type="hidden" id="timeStartFact">
+                            <input name="timeFinishPlan" type="hidden" id="timeFinishPlan">
+                            <input name="timeFinishFact" type="hidden" id="timeFinishStart">
+                            <input name="statusId" type="hidden" id="statusId">
+                        </div>
+                        <div class="form-group">
+                            <label for="addressText">Адрес</label>
+                            <input name="addressText" type="text" id="addressText" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="cargoText">Груз</label>
+                            <input name="cargoText" type="text" id="cargoText" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="stopTime">Длительность стоянки (мин.)</label>
+                            <input name="stopTime" type="number" id="stopTime" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="typeSelect">Тип задания</label>
+                            <select name="typeSelect" id="typeSelect" class="form-control">
+                            </select>
+                        </div>
+                    </form>
+                    <!--<button id="toRoute" class="btn btn-primary" data-dismiss="modal">К маршруту</button>-->
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+                    <button id="saveJobBtn" class="btn btn-primary" data-dismiss="modal">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h2 class="page-header text-center">Задания</h2>
+        <div class="filter form-inline">
+            <div class="form-group">
+                <input type="checkbox" id="assignedChb" class="filter-jobs form-check-inline">
+                <label for="assignedChb">Назначено</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="nonAssignedChb" class="filter-jobs form-check-inline">
+                <label for="nonAssignedChb">Не назначено</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="completeChb" class="filter-jobs form-check-inline">
+                <label for="completeChb">Выполнено</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="delayedChb" class="filter-jobs form-check-inline">
+                <label for="delayedChb">С опозданием</label>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="nonCompletedChb" class="filter-jobs form-check-inline">
+                <label for="nonCompletedChb">Невыполнено</label>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table id="jobsTable" class="table table-bordered table-hover table-suggested table-sm">
+                <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Время создания</th>
+                    <th>Статус</th>
+                    <!--<th>Водитель</th>-->
+                    <th>Адрес</th>
+                    <th>Груз</th>
+                    <th>Тип</th>
+                    <th>Стоянка</th>
+                    <th>Прибытие план.</th>
+                    <th>Прибытие факт.</th>
+                    <th>Убытие план.</th>
+                    <th>Убытие факт.</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <!-- <div class="actions">
+            <button id="newJob" class="btn btn-primary">Новое задание</button>
+        </div> -->
+    </div>
+
+    <script src="js/jobModel.js"></script>
+    <script src="js/jobs.js"></script>
+</body>
+</html>
