@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="css/registrations.css">
+</head>
+<body>
+    <!-- HTML-код модального окна -->
+    <div class="modal fade bd-example-modal-sm" id="registrationModalBox">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Регистрация водителя</h5>
+                    <button class="close" data-dismiss="modal">×</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form" action="#" method="post">
+                        <input type="hidden" name="registrationId">
+                        <div class="form-group">
+                            <label for="driversSelect">Водитель</label>
+                            <select name="driversSelect" id="driversSelect" class="form-control">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="vehiclesSelect">Автомобиль</label>
+                            <select name="vehiclesSelect" id="vehiclesSelect" class="form-control">
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="devicesSelect">Устройство</label>
+                            <select name="devicesSelect" id="devicesSelect" class="form-control">
+                            </select>
+                        </div>
+                        <!--<div class="form-group">-->
+                            <!--&lt;!&ndash;<label for="dateStart">Время регистрации</label>&ndash;&gt;-->
+                            <!--<input name="dateStart" type="hidden" id="dateStart" class="form-control">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--&lt;!&ndash;<label for="dateFinish">Время окончания регистрации</label>&ndash;&gt;-->
+                            <!--<input name="dateFinish" type="hidden" id="dateFinish" class="form-control">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                            <!--<label for="actual">Актуальна</label>-->
+                            <!--<select name="actual" id="actual" class="form-control">-->
+                                <!--<option value="1">Да</option>-->
+                                <!--<option value="0">Нет</option>-->
+                            <!--</select>-->
+                        <!--</div>-->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" data-dismiss="modal">Закрыть</button>
+                    <button id="saveRegBtn" class="btn btn-primary" data-dismiss="modal">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <h2 class="page-header text-center">Регистрация водителей</h2>
+        <!--<div class="filter form-inline">-->
+            <!--<div class="form-group">-->
+                <!--<input type="checkbox" id="onlyActual" class="form-check-inline">-->
+                <!--<label for="onlyActual">Только актуальные</label>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div class="table-responsive">
+            <table id="registrationsTable" class="table table-bordered table-hover table-suggested table-sm">
+                <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Водитель</th>
+                    <th>Автомобиль</th>
+                    <th>Номер автомобиля</th>
+                    <th>Устройство</th>
+                    <th>Номер телефона</th>
+                    <th>Время регистрации</th>
+                    <th class="cancel-col"></th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="actions">
+            <button id="newRegistration" class="btn btn-primary">Зарегистрировать</button>
+        </div>
+    </div>
+
+    <script src="js/registrationModel.js"></script>
+    <script src="js/registrations.js"></script>
+</body>
+</html>
